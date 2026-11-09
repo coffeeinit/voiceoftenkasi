@@ -1,0 +1,984 @@
+/* ===== FONT IMPORT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ===== GLOBAL RESET ===== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #70baff;
+}
+
+.h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 60px;
+  color: #000;
+}
+
+.h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  font-size: 75px;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar-custom {
+  
+  background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #ddd;
+  padding: 1.2rem 0;
+
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* soft bottom shadow */
+  position:fixed;
+  z-index: 1030;
+ width: 100%;
+ height: 12%;
+ 
+
+}
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030; /* above other content */
+}
+
+
+.navbar-brand img {
+  max-height: 90px;
+  width: auto;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  margin-top: -10px;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Donate button (black border, white fill) */
+.donate-btn {
+  background: transparent;
+   color: #5ea4ff;
+  border: 2px solid #5ea4ff;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+}
+.donate-btn:hover {
+  background-color: #5ea4ff;
+  color: #fff;
+  border-color: #5ea4ff;
+}
+
+
+@keyframes pulseGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(10px, 10px); }
+}
+
+/* Light glass-style navbar */
+.glass-navbar {
+  /* ensures it stays above other content */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+}
+
+/* Inner menu box with soft border */
+.nav-menu-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
+
+/* Navbar links (black text) */
+.navbar .nav-link {
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #5ea4ff !important;
+}
+
+
+
+/* === Hero Section === */
+.hero-section {
+  position: relative;
+  background-color: #0084ff;
+  color: white;
+  text-align: left;
+  
+}
+
+.hero-section .hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.4;
+  }
+}
+
+.hero-section img.shadow-sm:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* === About Us Goals === */
+ul.list-unstyled i {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+/* === Gallery Scroll === */
+#galleryScroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+#galleryScroll .card {
+  min-width: 280px;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+#galleryScroll img {
+  border-radius: 12px;
+  object-fit: contain;
+  max-height: 400px;
+}
+
+/* === Section Titles === */
+h2.text-center.fw-bold {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #123974;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  h2.text-center.fw-bold {
+    font-size: 1.8rem;
+  }
+}
+
+/* === Initiative Cards === */
+.initiative-card {
+  background-color: #e6f3ff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.initiative-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease;
+}
+
+.initiative-card:hover .initiative-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.initiative-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.initiative-card .card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.initiative-card .btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 6px 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.initiative-card .btn:hover {
+  transform: translateY(-2px);
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+/* Base settings for initiative cards */
+.initiative-card,
+.program-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+/* Initial entrance animation */
+[data-aos][data-aos].initiative-card {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Hover lift & glow effect */
+.initiative-card:hover,
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth icon scale-up on hover */
+.initiative-card .initiative-icon,
+.program-card img {
+  transition: transform 0.4s ease;
+}
+
+.initiative-card:hover .initiative-icon,
+.program-card:hover img {
+  transform: scale(1.1);
+}
+
+
+/* === AOS Animation Tweaks === */
+[data-aos] {
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+}
+.glow-rotate-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rotating-glow-single {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;              
+  height: 300px;               
+  transform: translate(-50%, -50%);
+  border-radius: 50%;          /* Keep it circular */
+  background: conic-gradient(
+    from 0deg,
+    #00d9ff 0%,
+    transparent 40%,
+    transparent 60%,
+    #00d9ff 100%
+  );
+  filter: blur(20px);          /* Reduced blur from 30px */
+  animation: rotateSingleGlow 4s linear infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+
+@keyframes rotateSingleGlow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+
+/* Major Activities */
+.card-activity {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.card-activity:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-activity img,
+.card-activity .activity-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card-activity h5 {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-activity p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Final Program Cards */
+.program-card {
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.program-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px #e6f3ff;
+}
+
+.program-card h4 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* === Knowledge Cards === */
+.course-card img {
+  width: 50%;
+  height: 200px; /* Reduced from 200px */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.course-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.course-card img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.course-card .card-body {
+  padding: 20px;
+}
+
+.course-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.course-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.course-card .btn-primary {
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+.rating i {
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+
+
+/* === Featured Members === */
+.featured-member-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-member-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-member-img {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.featured-member-card:hover .featured-member-img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* === Job Section Specific Collapse Animation === */
+.job-collapse:not(.show) {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.job-collapse.show {
+  animation: fadeSlideIn 0.5s ease both;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Job Section Styles */
+/* Job Card Styling */
+.job-card {
+  background-color: #e6f3ff; /* Light blue, no white */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Job Title Button */
+.job-title-toggle {
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #123974;
+  border: none;
+  outline: none;
+}
+
+.job-title-toggle .dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.job-title-toggle.collapsed .dropdown-icon i {
+  transform: rotate(0deg);
+}
+
+.job-title-toggle[aria-expanded="true"] .dropdown-icon i {
+  transform: rotate(180deg);
+}
+
+@keyframes slideFadeIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Inner content spacing */
+#job0, #job1, #job2, #job3, #job4, #job5, #job6, #job7, #job8, #job9, #job10 {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/*contact*/
+.connect-section {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.social-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px 10px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 110px;
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-bg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+/* Social platform colors */
+.facebook .icon-bg { background: #1877f2; }
+.twitter .icon-bg { background: #1da1f2; }
+.youtube .icon-bg { background: #ff0000; }
+.whatsapp .icon-bg { background: #25d366; }
+.instagram .icon-bg {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
+.social-card span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .icon-bg {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .social-card span {
+    font-size: 13px;
+  }
+}
+
+/*NEWS*/
+.news-card {
+  margin-bottom: 60px;
+}
+
+/* Ensure submenus float to the right, not stack */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -0.25rem;
+  margin-left: 0.1rem;
+  display: none;
+  position: absolute;
+  min-width: 180px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a::after {
+  content: "\f105"; /* Font Awesome right arrow */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  float: right;
+  margin-left: 5px;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove gap */
+}
+
+/* Remove underlines from nav links */
+.navbar-nav .nav-link {
+  
+   text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* Optional: underline only on hover */
+.navbar-nav .nav-link:hover {
+   text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+
+
+/* Prevent dropdowns from breaking layout */
+.dropdown-menu {
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth dropdown */
+.dropdown-menu {
+  transition: all 0.2s ease;
+}
+
+
+.job-card {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  min-height: 220px;
+}
+
+.job-card .job-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.job-card:hover .job-content {
+  opacity: 1;
+  height: auto;
+  margin-top: 10px;
+}
+
+.job-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Make logo circular and larger */
+.job-logo-wrapper img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/*CONTACT PAGE*/
+.connect-heading h2,
+  .connect-heading h1 {
+    font-weight: 700;
+  }
+
+  .connect-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    color:#0B2E4D;
+
+  }
+
+  .connect-heading h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color:#43C4EE;
+  }
+
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: #f1f1f1;
+    color: #333;
+    transition: 0.3s;
+  }
+
+  .icon-circle:hover {
+    background-color: #43C4EE;
+    color: #fff;
+  }
+
+  .icon-row {
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    .icon-row {
+      flex-wrap: wrap;
+    }
+  }
+
+/* Patron Section Redesign */
+.patron-img-bg {
+  background: linear-gradient(135deg, #e6f3ff 60%, #b0d4f1 100%);
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(80, 120, 180, 0.12);
+  position: relative;
+}
+.patron-img {
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 16px rgba(80, 120, 180, 0.10);
+  background: #fff;
+}
+.patron-content {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(80, 120, 180, 0.08);
+}
+.patron-quote-box {
+  background: #e6f3ff;
+  border-left: 4px solid #0d6efd;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+@media (max-width: 991.98px) {
+  .patron-img-bg {
+    width: 220px;
+    height: 220px;
+  }
+  .patron-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 575.98px) {
+  .patron-img-bg {
+    width: 140px;
+    height: 140px;
+  }
+  .patron-img {
+    width: 90px;
+    height: 90px;
+  }
+  .patron-content {
+    padding: 1rem;
+  }
+}
+
+/* Patron Section Redesign - Image Fills Oval */
+.patron-img-bg-oval {
+  background: linear-gradient(135deg, #e6f3ff 60%, #b0d4f1 100%);
+  width: 100%;
+  max-width: 800px;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 300px / 180px;
+  box-shadow: 0 20px 80px rgba(80, 120, 180, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+.patron-img-animated {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 4rem;
+  border: none;
+  box-shadow: none;
+  background: none;
+  animation: floatY 3.5s ease-in-out infinite alternate;
+}
+@keyframes floatY {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-40px) scale(1.06); }
+}
+@media (max-width: 991.98px) {
+  .patron-img-bg-oval {
+    max-width: 100%;
+    width: 100%;
+    height: 340px;
+    border-radius: 160px / 90px;
+  }
+  .patron-img-animated {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .patron-img-bg-oval {
+    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    border-radius: 60px / 32px;
+  }
+  .patron-img-animated {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+  }
+}
+
+/* Oval/Ellipse style for Karunya image */
+.karunya-squircle {
+  border-radius: 50% / 35%;
+  border: 3px solid #b0d4f1;
+  box-shadow: 0 8px 32px rgba(80,120,180,0.10);
+  background: #fff;
+}
+
+/* Horizontal Activity Card Styles */
+.activity-horizontal-card {
+  transition: box-shadow 0.2s;
+}
+.activity-horizontal-card:hover {
+  box-shadow: 0 8px 32px rgba(80,120,180,0.13);
+  background: #f8fbff;
+}
+.activity-img-wrapper img {
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .activity-horizontal-card {
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left;
+  }
+  .activity-img-wrapper {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
+
+/* Horizontal scroll row for activities with buttons */
+.activity-scroll-row {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.activity-scroll-row::-webkit-scrollbar {
+  display: none;
+}
+.activity-scroll-card {
+  transition: box-shadow 0.2s;
+  height: 220px !important;
+  min-width: 340px;
+  max-width: 360px;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.activity-scroll-card:last-child {
+  margin-right: 0 !important;
+}
+.activity-horizontal-card {
+  height: 100% !important;
+  min-height: 200px;
+  flex-direction: row;
+  align-items: center;
+}
+.activity-img-wrapper {
+  width: 110px !important;
+  height: 170px !important;
+  min-width: 110px !important;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity-img-wrapper img {
+  width: 70px !important;
+  height: 120px !important;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+@media (max-width: 767.98px) {
+  .activity-scroll-card {
+    min-width: 90vw;
+    max-width: 95vw;
+    height: 180px !important;
+  }
+  .activity-img-wrapper {
+    height: 120px !important;
+  }
+  .activity-img-wrapper img {
+    height: 80px !important;
+  }
+}
+/*WHAT WE DO*/
+
+  .overflow-auto::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .overflow-auto::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+
+  @media (min-width: 768px) {
+    .overflow-auto::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+/*VOLUNTEER PAGE*/
